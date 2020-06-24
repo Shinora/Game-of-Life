@@ -78,15 +78,16 @@ int main(){
                 }
 
                 else{
-                    if(ne==3){
+                    if(ne==3)
+                    {
                         buffer[i][j] = 1;
                     }
-                    else{
+                    else
+                    {
                         buffer[i][j] = 0;
                     }
                 }
                 
-
             }
         }
         // updating and printing the grid
@@ -105,7 +106,6 @@ int main(){
     }
 
     return 0;
-  
 }
 
 
@@ -117,5 +117,4 @@ int random_bool(){
 	printf("%d",randomdigit);
 
     return randomdigit;
-	
-    
+}
