@@ -10,11 +10,15 @@ int main(){
     srand(time(NULL));
 
     printf(" Welcome to the game of life, please enter a number to define the bi-dimmensional array size : ");
+    //input size
     scanf("%10d", &size);
+    //avoid memory overflow
     if(size >1000){ exit(1);}
 
     int grid[size][size];
     int buffer [size][size];
+
+    // setting up the grid with random bools
 
     for(int i=0; i<size; i++){
         for(int j=0; j<size; j++){
@@ -29,7 +33,11 @@ int main(){
     printf("\n");
     printf("\n");
 
+    // game infinite loop
+
     while(1){
+        
+        //life game rules
 
         for(int i=0; i<size; i++){
             for(int j=0; j<size; j++){
@@ -81,6 +89,7 @@ int main(){
 
             }
         }
+        // updating and printing the grid
         for(int k=0; k<size; k++){
             for(int l=0; l<size; l++){
                 grid[k][l] = buffer[k][l];
@@ -95,10 +104,6 @@ int main(){
         printf("\n");
     }
 
-
-    
-
-
     return 0;
   
 }
@@ -107,14 +112,10 @@ int main(){
 int random_bool(){
 
     int randomdigit = 0;
-	 // initialisation de rand
 	
 	randomdigit = rand()%2;
 	printf("%d",randomdigit);
 
     return randomdigit;
 	
-
-
-    // generates a random bool
-}
+    
