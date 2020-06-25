@@ -10,7 +10,9 @@ int main(){
     char mybool;
     srand(time(NULL));
 
-    printf(" Welcome to the game of life, please enter a number to define the bi-dimmensional array size : ");
+    printf("Welcome to the game of life ! \n\n");
+
+    printf("Please enter a number to define the bi-dimmensional array size : ");
     //input size
     scanf("%10d", &size);
     //avoid memory overflow
